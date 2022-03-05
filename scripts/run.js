@@ -1,13 +1,19 @@
 const main = async () => {
     const gameContractFactory = await hre.ethers.getContractFactory("EpicGame");
-    const gameContract = await gameContractFactory.deploy(
-        ["Leo", "Aang", "Pikachu"],       // Names
-        ["https://i.imgur.com/pKd5Sdk.png", // Images
-            "https://i.imgur.com/xVu4vFL.png",
-            "https://i.imgur.com/WMB6g9u.png"],
-        [100, 200, 300],                    // HP values
-        [100, 50, 25]                       // Attack damage values
-    );
+    const gameContract = await gameContractFactory.deploy(                        
+        ["Chevrolet Camaro", "classic muscle", "contessa classic", "car craft"],       
+        ["QmRxfJF933aN2yxngHswVwMz1QmEjbzJHdZ7Kn7xsp1UA7", 
+        "QmQ7CZrNhbF5uiQGwYN9YE4bByGoVLHa2W4Uwymf6akG1W", 
+        "Qmd2iYmcdLKVB4J7PtiLTFfa4YsrXeGucXe6cc1x1Jbxs8",
+        "Qme92siKe97nQqYhmmWNSLFyLqwxMv3o5qusX9RUHaDngF"],
+        [200, 200, 200,200],                    
+        [50, 50,50, 25],
+        "Cyber Truck",
+        "QmRm5yid8PJ5dZPPBYDo9cJEeSKKk9EoPdJrQsWEk4FVUJ",
+        2000,
+        50
+      );
+    
     await gameContract.deployed();
     console.log("contact address", gameContract.address);
 
