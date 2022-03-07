@@ -1,16 +1,19 @@
 const main = async () => {
   const gameContractFactory = await hre.ethers.getContractFactory("EpicGame");
   const gameContract = await gameContractFactory.deploy(
-    ["Bojack", "Princess carolyn", "Mr Peanut butter"],
+    ["Iron Man ", "Captain America", "Hulk", "Thor","Doctor Strange", "Black Panther"],
     [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK5XchwUGs75xIyfJ5XJsemrOVM_DdJna9rw9PtEuEA3GMkqWuKI004sW-JCQequI6e_g&usqp=CAU", // Images
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTv35ki3PrwK3ikMDMBZ15dZY3LyEB3eWseyh8epi_1RCXEpekqGFSE4kfKzqZ-MLkCdQ&usqp=CAU",
-      "https://i.pinimg.com/474x/bf/0f/19/bf0f19dc0c6893fba26d8307dcfbef85--bojack-animation-character.jpg",
+      "https://www.redwolf.in/image/catalog/designer-Images/themes/iron-man-artist-image.png", 
+      "https://wallpapercave.com/wp/wp1808958.jpg",
+      "https://wallpapercave.com/wp/xFMDu2w.jpg",
+      "https://cdn.wionews.com/sites/default/files/2021/01/22/179571-8.jpg",
+      "https://cdn.vox-cdn.com/thumbor/7K3uPy1iLOC4ovn73AY28U_-FGg=/0x0:1920x1079/1200x800/filters:focal(1085x298:1391x604)/cdn.vox-cdn.com/uploads/chorus_image/image/64773806/ply_dr_strange_graded.0.jpg",
+      "https://www.sideshow.com/product-asset/910233"
     ],
-    [100, 200, 300],
-    [100, 50, 25],
-    "Beatrice Horseman",
-    "https://static.wikia.nocookie.net/villains/images/2/21/Beatrice_Horseman_Now.png/revision/latest?cb=20200725032320",
+    [200, 200, 300,200,200,2000],
+    [25, 25, 50,25, 25,25],
+    "Thanos",
+    "https://wallpapercave.com/wp/wp4295149.jpg",
     10000,
     50
   );
